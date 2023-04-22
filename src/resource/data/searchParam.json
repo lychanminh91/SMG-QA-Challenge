@@ -1,0 +1,18 @@
+[
+    {
+        "action":"query",
+        "format": "json",
+        "list" : "search",
+        "formatversion" : "as",
+        "srsearch" : "software testing",
+        "sroffset":10
+    },
+    {
+        "action":"query",
+        "format": "json",
+        "list" : "search",
+        "formatversion" : 2,
+        "srsearch" : "facebook",
+        "sroffset":10
+    }
+]

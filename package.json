@@ -1,0 +1,33 @@
+{
+  "name": "smg-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "wiki_api":"npm run && npx playwright test --grep @wiki",
+    "wiki_web":"npm run && npx playwright test --grep @web --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@playwright/test": "^1.27.1",
+    "@types/chai": "^4.3.4",
+    "allure-playwright": "^2.0.0-beta.19",
+    "axios": "^1.1.3",
+    "babel-jest": "^29.5.0",
+    "convert-csv-to-json": "^1.4.0",
+    "form-data": "^4.0.0",
+    "playwright": "^1.27.1",
+    "rimraf": "^3.0.2",
+    "testrail-integration": "^0.2.5",
+    "walk-sync": "^3.0.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.7"
+  }
+}
