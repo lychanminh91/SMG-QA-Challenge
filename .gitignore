@@ -1,0 +1,6 @@
+node_modules/
+/playwright/.cache/
+allure-results/
+allure-report/
+test-results/
+.DS_Store
