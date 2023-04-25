@@ -12,16 +12,19 @@ test.describe('Verify search from Wiki @web',()=>{
         page = await context.newPage()
     })
     test('Verify search with normal text', async() => {
-        let searchWord = 'Software testing'
+        let searchWord = 'software testing'
         const wikiMain = new WikiMain(page)
         await wikiMain.openMainPage(CONFIG.MainPage_url)
         await wikiMain.clickToSearchPageContainText(searchWord)
         const searchPage = new SearchResults(page)
         await searchPage.verifySearchWithExactPageTitle(searchWord)
+        //check if searchword present in title
+        await searchPage.isSearchWordPresentInTitle(searchWord)
     })
 
     test('Verify search with no result', async() => {
         let searchWord = 'asdasdasd'
+        let length = 0
         const wikiMain = new WikiMain(page)
         await wikiMain.openMainPage(CONFIG.MainPage_url)
         await wikiMain.clickToSearchPageContainText(searchWord)
