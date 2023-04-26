@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { expect ,test } from "@playwright/test";
 import SearchResults from "../../page/Wiki/SearchResult.page";
 import WikiMain from "../../page/Wiki/WikiMain.page";
 import CONFIG from "../../utils/Config_Env"
@@ -19,7 +19,7 @@ test.describe('Verify search from Wiki @web',()=>{
         const searchPage = new SearchResults(page)
         await searchPage.verifySearchWithExactPageTitle(searchWord)
         //check if searchword present in title
-        await searchPage.isSearchWordPresentInTitle(searchWord)
+        expect(await searchPage.isSearchWordPresentInTitle(searchWord)).toEqual(true)
     })
 
     test('Verify search with no result', async() => {
